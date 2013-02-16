@@ -150,6 +150,7 @@ public class BukkitWorld extends DynmapWorld {
         if(isLoaded()) {
             NewMapChunkCache c = new NewMapChunkCache();
             c.setChunks(this, chunks);
+            c.setVisibilityParameters((DynmapWorld) this);
             return c;
         }
         else {
